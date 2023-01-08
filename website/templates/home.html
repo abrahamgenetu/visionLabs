@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Introduction Section Starts -->
+{% block content %}
+<section class="container intro">
+    <section class="row mt-5">
+       
+        
+        <section class="col-md-4 offset-md-2 mx-auto mt-5">
+            <h1 class="animate__animated animate__bounceInLeft">VisionLabs</h1>
+            <p><i>Even without Sight, there is still a Vision.</i></p>
+            <br>
+            <h6 class="animate__animated animate__bounceInRight">“The power of the web is in its universality. Access by everyone regardless of disability is an essential aspect.” Tim Berners-Lee, W3C Director and Inventor of WWW.</h6>
+            <p><span class="typing-text"></span></p>
+        </section>
+        <section class="offset-md-2 col-md-5">
+            <img src="{% static '/assests/home.jpg' %}" alt="howtouseQuotation" class="img-fluid">
+        </section>
+    </section>
+</section>
+<!-- Typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Developer Typed.js file -->
+<script src="{% static '/js/typed.js' %}"></script>
+{% endblock %}
+<!-- Introduction Section Ends -->
