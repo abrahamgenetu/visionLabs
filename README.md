@@ -1,11 +1,6 @@
 # VisionLabs
-Visually Impaired Society improvement by including Language speech Input to eyed website.<br><br>
 
-
-We've discovered that visually impaired persons in our culture have difficulty accessing and interacting with websites since there is no appropriate medium for them. This project was designed to address this issue.
-
-VisionLabs would help visually challenged persons become technologically literate.
-
+We've discovered that visually impaired persons in our culture have difficulty accessing and interacting with websites since there is no appropriate medium for them. This project was designed to address this issue. VisionLabs would help visually challenged persons become technologically literate.
 We employed speech recognition technology to make it easier for visually impaired persons to browse websites, removing a technological barrier. We deployed, shared, and wrote an article about the project.
 
 <!-- GETTING STARTED -->
