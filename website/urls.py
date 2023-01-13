@@ -14,14 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 #This is the settings.py containing information about the MEDIA_URL and MEDIA_ROOT
 from django.conf import settings
 
 #Helps to work with the static files
 from django.conf.urls.static import static
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.contrib.staticfiles.urls import static
+from audioplayer import views as audio_views
 from . import views
 
 urlpatterns = [
@@ -33,6 +35,10 @@ urlpatterns = [
     path('motivation', views.motivation,name='motivation'),
     path('beneficiary', views.beneficiary,name='beneficiary'),
     path('technologies', views.technologies,name='technologies'),
-    # path('audiobooks', views.audiobooks,name='audiobooks'),
+    #######################################
+    path('music', audio_views.song, name='music'),
+    path('audio', audio_views.audio, name='audio'),
     
-] + static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
+]
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -30,12 +30,10 @@ def about(request):
         print(source_path)
         return render(request,'about.html',{'source_path':source_path})
 
-# def audiobooks(request):
-#     if request.method=='GET':
-#         return render (request,'audiobooks.html')
-
-# def locateme(request):
-    # where i am....
+def music(request):
+    if request.method=='GET':
+        print(source_path)
+        return render (request,'audio.html',{'source_path':source_path})
     
 def howtouse(request):
     if request.method=='GET':

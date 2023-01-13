@@ -2,9 +2,9 @@
 
 let option = {
   strings: [
-    "We believe in making world a better place",
-    "We believe in helping people",
-    "We believe in working together",
+    "VisionLabs believe in making world a better place",
+    "VisionLabs believe in helping people",
+    "VisionLabs believe in working together",
   ],
   loop: true,
   typeSpeed: 50,
