@@ -1,10 +1,10 @@
 from django.shortcuts import render,redirect
-
 from .visibilitypython import *
 
 def home(request):
     global source_path
-    source_path = "/media/howtouse.mp3"
+    source_path = "/media/Sample.mp3"
+
     if request.method=='POST':
         text = request.POST.get('text')
         confidence = request.POST.get('confidence')
