@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Montserrat:wght@100&family=PT+Serif&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Montserrat:wght@100&family=PT+Serif&family=Poppins:wght@100&family=Space+Mono&display=swap');
+
+body {
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    padding: 0;
+    background-color: red;    
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+}
+
+.header h2 {   
+  font-size: 45px;
+  /* text-shadow:  2px 2px orange, 4px 4px yellow; */
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.description h5 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #330867 ;
+}
+
+.description p {
+    line-height: 12px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;  
+    margin-top: 90px;  
+   
+ }
+
+ img {
+    width: 75%;
+    margin-left: 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px;
+    transition: transform 0.5s;
+    border: 0.2px solid #30CFD0;
+}
+ 
+img:hover {
+    transform: scale(1.03)
+} 
+
+.photo__job {
+    writing-mode: vertical-rl;
+    margin: 0;
+    padding: 0;
+    right: 50px;
+    position: relative;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size:  15px;
+    text-transform: uppercase;  
+    color: #330867;
+}
+
+.position__middle {
+    margin-top: 45px;
+}
+
+.photo {
+    display: flex;
+}
+
+.middle {
+    margin-top: 3rem;
+ }
+
+.name {
+    margin-top: 7px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19.5px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 60px;
+    color: #30CFD0;    
+}
+
+footer {
+text-align: center;
+color: #A9A9A9;
+}
+
+  @media only screen and (max-width: 600px){
+    .container {   
+        margin-top: 20px;    
+        grid-template-columns: repeat(1, 1fr);  
+    }
+
+    .description h5 {
+        margin-top: 10px;
+    }
+
+    .images {       
+        grid-template-columns: repeat(2, 1fr);
+        column-gap:0;
+        margin-top: 50px;  
+     }
+
+     .photo__job {
+        right: 20px;
+        font-size: 11px;
+     }
+
+    
+     img {
+        margin-left: 30px;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .photo__job {
+        right: 0;
+        font-size: 12px;
+     }
+
+    .name {
+    font-size: 15px;
+    } 
+
+.description p {
+    line-height: 16px;
+    
+}
+     
+  }
