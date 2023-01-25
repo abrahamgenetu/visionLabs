@@ -3,7 +3,7 @@ from .visibilitypython import *
 
 def home(request):
     global source_path
-    source_path = "/media/Sample.mp3"
+    source_path = "/media/sample2.mp3"
 
     if request.method=='POST':
         text = request.POST.get('text')
@@ -54,4 +54,7 @@ def technologies(request):
     if request.method=='GET':
         print(source_path)
         return render(request,'technologies.html',{'source_path':source_path})
-
+def locateme(request):
+    if request.method=='GET':
+        print(source_path)
+        return render(request,'location.html',{'source_path':source_path})
