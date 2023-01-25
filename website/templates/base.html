@@ -21,7 +21,7 @@
     <!-- Developer Css File-->
     <link rel="stylesheet" href="{% static '/css/index.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
-
+    
 </head>
 
 <body>
@@ -40,8 +40,28 @@
                     <div class="navbar-nav text-uppercase ms-auto p-1">
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                         <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                        <a class="nav-link" href="{% url 'howtouse' %}">How to Use</a>
                         <!--  -->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Audio Apps</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'audio' %}">Audio Book</a></li>
+                                <li><a class="dropdown-item" href="{% url 'music' %}">Music Player</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Info Apps</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'newsfeed' %}">News Feed</a></li>
+                                <li><a class="dropdown-item" id="locateme" href="{% url 'locateme' %}">My location</a>
+                                <li><a class="dropdown-item" href="{% url 'howtouse' %}">How to Use</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                    
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">More</a>
@@ -49,15 +69,6 @@
                                 <li><a class="dropdown-item" href="{% url 'motivation' %}">Motivation</a></li>
                                 <li><a class="dropdown-item" href="{% url 'beneficiary' %}">Beneficiary</a></li>
                                 <li><a class="dropdown-item" href="{% url 'technologies' %}">Technologies</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'audio' %}">Audio Book</a></li>
-                                <li><a class="dropdown-item" href="{% url 'music' %}">Music Player</a></li>
-                                <li><a class="dropdown-item" href="{% url 'technologies' %}">Locate Me</a></li>
                             </ul>
                         </li>
                     </div>
@@ -92,6 +103,7 @@
         </script>
     <!-- Speech to Text Conversion -->
     <script src="{% static '/js/speechToText.js'%}" defer></script>
+    <script src="{% static '/js/location.js'%}" defer></script>
 </body>
 
 {% block content %}

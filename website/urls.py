@@ -24,8 +24,11 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.staticfiles.urls import static
 from audioplayer import views as audio_views
-from . import views
-
+from . import views 
+from blog.views import (
+    PostListView,
+    PostDetailView,
+)
 urlpatterns = [
     path('admin/', admin.site.urls),
     #####################################
@@ -35,9 +38,13 @@ urlpatterns = [
     path('motivation', views.motivation,name='motivation'),
     path('beneficiary', views.beneficiary,name='beneficiary'),
     path('technologies', views.technologies,name='technologies'),
+    path('locateme', views.locateme,name='locateme'),
     #######################################
     path('music', audio_views.song, name='music'),
     path('audio', audio_views.audio, name='audio'),
+    ######################################
+    path('newsfeed/', PostListView.as_view(), name='newsfeed'),
+    path('newsfeed/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     
 ]
 urlpatterns += staticfiles_urlpatterns()

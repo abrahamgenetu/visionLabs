@@ -4,8 +4,6 @@ from django.shortcuts import render,redirect
 from django.core.paginator import Paginator
 from . models import music, Audiobooks
 
-
-
 def audio(request):
     paginator= Paginator(Audiobooks.objects.all(),1)
     page_number = request.GET.get('page')

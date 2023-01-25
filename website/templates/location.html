@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!-- beneficiary Section Starts -->
+{% block content %}
+<style>
+
+button{
+  border: none;
+  outline: none;
+  font-size: 50px;
+  color: #5372F0;
+  padding: 23px 44px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+}
+
+</style>
+<section class="container" id="aboutus-section">
+    <section class="row mt-5">
+        <section class="col-md-5 mt-5">
+            <!-- <p>Displaying location using Latitude and Longitude</p>
+            <button class="geeks" onclick="getlocation()">
+                Click Me
+            </button>
+            <p id="demo1"></p>
+            <script>
+                var variable1 = document.getElementById("demo1");
+                function getlocation() {
+                    navigator.geolocation.getCurrentPosition(showLoc);
+                }
+                function showLoc(pos) {
+                    variable1.innerHTML =
+                        "Latitude: " +
+                        pos.coords.latitude +
+                        "<br>Longitude: " +
+                        pos.coords.longitude;
+                }
+            </script> -->
+            <button>Detect Your Location</button>
+        </section>
+        <section class="offset-md-2 col-md-5">
+            <img src="{% static '/assests/location.jpg' %}" alt="howtouseQuotation" class="img-fluid">
+        </section>
+    </section>
+</section>
+{% endblock %}
+<!-- beneficiary Section Ends -->
