@@ -17,7 +17,14 @@ header nav {
     background-color: #f4f4f4;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-
+h2 {   
+    font-size: 45px;
+    /* text-shadow:  2px 2px orange, 4px 4px yellow; */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
 .navbar-brand {
     width: 20vw;
     height: 4vw;
