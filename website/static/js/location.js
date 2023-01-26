@@ -19,8 +19,8 @@ function onSuccess(position) {
         .then(response => response.json()).then(response => {
             let allDetails = response.results[0].components; //passing components object to allDetails variable
             console.table(allDetails);
-            let { road, postcode, neighbourhood, college, county, country } = allDetails; //getting country, postcode, country properties value from allDetails obj
-            myLocation.innerText = `Your Location is: Around $ ${neighbourhood}, ${county} ${postcode}, ${country}`; //passing these value to the myLocation innerText
+            let { state, postcode, neighbourhood, college, county, country } = allDetails; //getting country, postcode, country properties value from allDetails obj
+            myLocation.innerText = ` ${county}, ${state}, ${country}`; //passing these value to the myLocation innerText
         }).catch(() => { //if error any error occured
             myLocation.innerText = "Something went wrong";
         });

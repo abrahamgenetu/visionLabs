@@ -4,42 +4,53 @@
 {% for post in posts %}
 <section class="container intro">
   <section class="row mt-5">
-      <article class="card shadow curve">
-        <div>
-          <p><strong>{{ post.title }}</strong></p>
-          <br>
-          <p>{{ post.content }}</p>
-          <span>
-            <i class="fab fa-twitter"></i>
-            VisionLabs- <time>{{ post.date_posted|date:"F d, Y" }}</time>
-          </span>
+    <article style="border-radius: 20px 20px 20px 20px;
+    background: transparent linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 50%, rgb(201, 202, 202) 70%) repeat scroll 0 0;
+    box-shadow: 1px 10px 20px 5px rgb(97, 97, 97);">
+      <div class="row g-0 align-items-center">
+        <div class="col-sm-3 col-3">
+          <img style="
+          max-width: 12em;height: 100%;
+          border-bottom-left-radius: calc(0.25rem - 1px);
+          border-top-left-radius: calc(0.25rem - 1px);" src="{% static '/assests/news.jpg' %}"  alt="...">
         </div>
-      </article>
+        <div class="col-sm-9 col-9">
+          <div>
+            <p><strong>{{ post.title }}</strong></p>
+            <br>
+            <p>{{ post.content }}</p>
+            <span>
+              <i class="fab fa-twitter"></i>
+              VisionLabs- <time>{{ post.date_posted|date:"F d, Y" }}</time>
+            </span>
+          </div>
+        </div>
       </div>
-      {% endfor %}
-      {% if is_paginated %}
+    </article>
+    {% endfor %}
+    {% if is_paginated %}
 
-      {% if page_obj.has_previous %}
-      <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
-      <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% if page_obj.has_previous %}
+    <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <a class="btn btn-outline-info mb-4"
+      href="?page={{ num }}">{{ num }}</a>
+      {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+      <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+      <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
       {% endif %}
 
-      {% for num in page_obj.paginator.page_range %}
-      {% if page_obj.number == num %}
-      <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
-      {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <a class="btn btn-outline-info mb-4"
-        href="?page={{ num }}">{{ num }}</a>
-        {% endif %}
-        {% endfor %}
+      {% endif %}
 
-        {% if page_obj.has_next %}
-        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
-        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-        {% endif %}
 
-        {% endif %}
-   
-  
   </section>
 </section>
 <!--card with shadow curve-->
