@@ -3,17 +3,54 @@
 
 <!-- Introduction Section Starts -->
 {% block content %}
+<style>
+    button {
+        border: none;
+        outline: none;
+        font-size: 50px;
+        color: #5372F0;
+        padding: 11px 22px;
+        border-radius: 10px;
+        cursor: pointer;
+        background: rgb(252, 252, 252);
+        box-shadow: 0 20px 20px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 45px;
+        /* text-shadow:  2px 2px orange, 4px 4px yellow; */
+        background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+</style>
+</style>
 <section class="container intro">
     <section class="row mt-5">
         <section class="col-md-4 offset-md-2 mx-auto mt-5">
-            <h1 class="animate__animated animate__bounceInLeft">VisionLabs</h1>
-            <p><i>Even without Sight, there is still a Vision.</i></p>
-            <br>
-            <h6 class="animate__animated animate__bounceInRight">“The power of the web is in its universality. Access by everyone regardless of disability is an essential aspect.” Tim Berners-Lee, W3C Director and Inventor of WWW.</h6>
-            <p><span class="typing-text"></span></p>
+
+
+            <h2 class="animate__animated animate__bounceInLeft">The VisionLabs</h2> <br>
+
+            <button>
+                <h6><i>Even without Sight, there is still a Vision.</i></h6>
+                <hr>
+                <h6 class="animate__animated animate__bounceInRight">“The power of the web is in its universality.
+                    Access by
+                    everyone regardless of disability is an essential aspect.” </h6>
+                <h6><i>Tim Berners-Lee, W3C Director and Inventor of
+                        WWW.</i></h6>
+                <br>
+
+                <h6><span class="typing-text"></span></h6>
+
+            </button>
+
+
         </section>
-        <section class="offset-md-2 col-md-5">
-            <img src="{% static '/assests/home2.jpg' %}" alt="howtouseQuotation" class="img-fluid">
+        <section class="offset-md-2 col-md-5"><br><br>
+            <img src="{% static '/assests/home2.jpg' %}" alt="howtouseQuotation" width="400" height="400" class="img-fluid">
         </section>
     </section>
 </section>
