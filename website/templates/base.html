@@ -57,7 +57,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url 'newsfeed' %}">News Feed</a></li>
                                 <li><a class="dropdown-item" id="locateme" href="{% url 'locateme' %}">My location</a>
-                                <li><a class="dropdown-item" href="{% url 'howtouse' %}">How to Use</a></li>
+                                <li><a class="dropdown-item" href="{% url 'time' %}">Current time</a></li>
                                 </li>
                             </ul>
                         </li>
@@ -66,6 +66,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">More</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'howtouse' %}">How to Use</a></li>
                                 <li><a class="dropdown-item" href="{% url 'motivation' %}">Motivation</a></li>
                                 <!-- <li><a class="dropdown-item" href="{% url 'beneficiary' %}">Beneficiary</a></li> -->
                                 <li><a class="dropdown-item" href="{% url 'technologies' %}">Technologies</a></li>
@@ -104,6 +105,7 @@
     <!-- Speech to Text Conversion -->
     <script src="{% static '/js/speechToText.js'%}" defer></script>
     <script src="{% static '/js/location.js'%}" defer></script>
+    <script src="{% static '/js/time.js'%}" defer> </script>
 </body>
 
 {% block content %}
