@@ -3,19 +3,28 @@
 
 <!-- Motivation Section -->
 {% block content %}
+<style>h2 {
+    font-size: 45px;
+    /* text-shadow:  2px 2px orange, 4px 4px yellow; */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}</style>
 <section class="container" id="howtouse-section">
     <section class="row mt-5">
         <section class="col-md-5 mt-5">
+            
             <h2 class="animate__animated animate__bounceInLeft">Motivation</h2>
             <ul class="animate__animated animate__bounceInRight">
 
-                  <li>For the project arose when we saw that normal people could access the website and get their required information without hassle.</li>
+                  <li>Motivation for the visionLabs arose when we saw that normal people could access the website and get their required information without hassle. But when it gets to visually impaired people, they can’t access the information even when the same holds significant value for them. </li>
                   <br>
-                  <li>But when it gets to visually impaired people, they can't access the information even when the same holds significant value for them.</li>
+                  <li>Our team then decided to make a sample website that contains the technologies that will help the website become accessible and help blind people in interacting with the website easily by removing the technological barrier.</li>
 
             </ul>
         </section>
-        <section class="offset-md-2 col-md-5">
+        <section class="offset-md-2 col-md-5"><br><br>
             <img src="{% static '/assests/motivation.jpg' %}" alt="Motivation-image" class="img-fluid">
         </section>
     </section>

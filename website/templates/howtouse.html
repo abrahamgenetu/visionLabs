@@ -2,23 +2,31 @@
 {% load static %}
 <!-- How to Use Information Section -->
 {% block content %}
+<style>h2 {
+    font-size: 45px;
+    /* text-shadow:  2px 2px orange, 4px 4px yellow; */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}</style>
 <section class="container" id="howtouse-section">
     <section class="row mt-5">
         <section class="col-md-5 mt-5">
-            <h2 class="animate__animated animate__bounceInLeft">HOW TO USE</h2>
+            <h2 class="animate__animated animate__bounceInLeft">User Guidelines</h2>
             <hr>
             <ul class="animate__animated animate__bounceInRight">
-                <li> Introductory audio plays at the beginning.</li><br>
-                <li> Choose the desired option from the options list.</li><br>
-                <li> Contents of the page will be read aloud.</li><br>
-                <li> Website too will be redirected.</li><br>
-                <li> Speak Stop to stop the website.</li><br>
-                <li> Double click anywhere on the screen to relaunch.</li><br>
+                <li> VisionLabs Intro audio plays at the beginning.</li><br>
+                <li> User requested to select desired options from the lists of options throught voice.</li><br>
                 <li> Speak only when entire audio stops.</li><br>
+                <li> Desired web page will be redirected.</li><br>
+                <li> Contents of redirected page will be read aloud.</li><br>
+                <li> To relaunch the system again, Double tab the screen.</li><br>
+                
             </ul>
         </section>
-        <section class="offset-md-2 col-md-5"><br><br>
-            <img src="{% static '/assests/howtouse.png' %}" alt="howtouseQuotation" width="400" height="400" class="img-fluid">
+        <section class="offset-md-2 col-md-5"><br><br><br><br>
+            <img src="{% static '/assests/howto.png' %}" alt="howtouseQuotation" width="400" height="400" class="img-fluid">
         </section>
     </section>
 </section>

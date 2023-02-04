@@ -58,3 +58,7 @@ def locateme(request):
     if request.method=='GET':
         print(source_path)
         return render(request,'location.html',{'source_path':source_path})
+def time(request):
+    if request.method=='GET':
+        print(source_path)
+        return render(request,'time.html',{'source_path':source_path})

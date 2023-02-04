@@ -38,7 +38,9 @@ urlpatterns = [
     path('motivation', views.motivation,name='motivation'),
     path('beneficiary', views.beneficiary,name='beneficiary'),
     path('technologies', views.technologies,name='technologies'),
+    #######################################
     path('locateme', views.locateme,name='locateme'),
+    path('time', views.time,name='time'),
     #######################################
     path('music', audio_views.song, name='music'),
     path('audio', audio_views.audio, name='audio'),
