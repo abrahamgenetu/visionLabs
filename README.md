@@ -22,9 +22,5 @@ python manage.py runserver
 
 ```
 
-## Contributors
-* Abraham Genetu -> **https://www.linkedin.com/in/abrahamgenetu/**
-* Beamlak Tesfahun -> **https://www.linkedin.com/in/beamlaktesfahun**
-* Lidya Daba -> **https://www.linkedin.com/in/lidya-daba-488044259**
 
 
